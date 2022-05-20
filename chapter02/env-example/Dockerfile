@@ -1,9 +1,9 @@
 FROM alpine:3.8
 LABEL maintainer="Russ McKendrick <russ@mckendrick.io>"
 LABEL description="This example Dockerfile installs Apache & PHP."
-ENV PHPVERSION 7
+ENV PHPVERSIO 5
 
-RUN apk add --update apache2 php${PHPVERSION}-apache2 php${PHPVERSION} && \
+RUN apk add --update apache2 php${PHPVERSIO}-apache2 php${PHPVERSIO} && \
         rm -rf /var/cache/apk/* && \
         mkdir /run/apache2/ && \
         rm -rf /var/www/localhost/htdocs/index.html && \
